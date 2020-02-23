@@ -9,7 +9,10 @@ const idGenerator = Object.freeze({
 module.exports = function makeFakeHero (overrides) {
   const hero = {
     id: idGenerator.makeId(),
-    name: faker.name.findName()
+    name: faker.name.findName(),
+    level: faker.random.number(),
+    createdAt: Date.now(),
+    updatedAt: Date.now()
   };
   return {
     ...hero,
