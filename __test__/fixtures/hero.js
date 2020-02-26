@@ -11,6 +11,8 @@ module.exports = function makeFakeHero (overrides) {
     id: idGenerator.makeId(),
     name: faker.name.findName(),
     level: faker.random.number(),
+    description: faker.lorem.paragraph(5),
+    attribute: faker.lorem.word(),
     createdAt: Date.now(),
     updatedAt: Date.now()
   };
